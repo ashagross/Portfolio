@@ -2,7 +2,9 @@ import React from 'react';
 import { TopSection } from './topSection';
 
 import styled from 'styled-components';
-import { AboutMeSection } from './aboutMe';
+import { AboutMeSection } from './skillsSection';
+import { ProjectSection } from './projectsSection';
+import { Marginer } from '../../components/marginer';
 
 
 
@@ -11,7 +13,7 @@ const PageContainer = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-`
+`;
 
 
 
@@ -20,6 +22,8 @@ export function Homepage(props) {
         <PageContainer>
             <TopSection />
             <AboutMeSection />
+            <Marginer direction="vertical" margin="2em" />
+            <ProjectSection />
         </PageContainer>
     );
 }

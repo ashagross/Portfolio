@@ -21,8 +21,8 @@ const AccessibilityContainer = styled.div`
 
 `;
 const Brand = styled.img`
-    height: 60px;
-    width: 60px;
+    height: 6em;
+    width: 6em;
 `;
 
 const Button = styled.button`

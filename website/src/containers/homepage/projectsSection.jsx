@@ -1,12 +1,19 @@
+import { CarouselProvider, DotGroup, Slider, Slide } from 'pure-react-carousel';
 import React from 'react';
-import { Marginer } from '../../components/marginer';
 import { SectionTitle } from '../../components/sectionTitle';
 import styled from 'styled-components';
 import { Element } from "react-scroll";
-import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import { ProjectCard } from '../../components/projectCard';
 
+
 import 'pure-react-carousel/dist/react-carousel.es.css';
+
+import Project1Img from '../../assets/pictures/project1.jpg';
+/* import Project2Img from '../../assets/pictures/project1.jpg';
+import Project3Img from '../../assets/pictures/project1.jpg';
+import Project4Img from '../../assets/pictures/project1.jpg'; */
+
+import LangImg1 from '../../assets/icons/react-brands.svg';
 
 
 const ProjectContainer = styled(Element)`
@@ -18,25 +25,76 @@ const ProjectContainer = styled(Element)`
 
 const StyledCarouselProvider = styled(CarouselProvider)`
     width: 50%;
+    margin-top: 8em;
 `;
 
 const StyledSlide = styled(Slide)`
-
+    .carousel__inner-slide {
+    margin-bottom: 0em;
+    display: flex;
+    justify-content: center;
+  }
 `;
 
+
+const StyledDotGroup = styled(DotGroup)`
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10em;
+    button {
+     width: 11px;
+     height: 11px;
+     border-radius: 50%;
+     background-color: #e4e4e4;
+     border: none;
+     outline: none;
+     &:not(:last-of-type) {
+       margin-right: 6px;
+    }
+  }
+  .carousel__dot--selected {
+    background-color: #e07a5f;
+  }
+`;
 export function ProjectSection(props) {
     return (
         <ProjectContainer>
             <SectionTitle>What I've Worked On</SectionTitle>
-            <Marginer direction='vertical' margin='3em' />
-            <StyledCarouselProvider naturalSlideWidth={200} naturalSlideHeight={300} totalSlides={4} visibleSlides={2}>
+            <StyledCarouselProvider
+                naturalSlideWidth={200}
+                naturalSlideHeight={250}
+                totalSlides={4}
+                visibleSlides={2}
+                isPlaying={true}
+                interval={6000}
+                >
                 <Slider>
-                    <Slide index={0}><ProjectCard /></Slide>
-                    <Slide index={1}><ProjectCard /></Slide>
-                    <Slide index={2}><ProjectCard /></Slide>
-                    <Slide index={3}><ProjectCard /></Slide>
+                    <StyledSlide index={0}>
+                        <ProjectCard
+                            projectImgUrl={Project1Img}
+                            langImgUrl={LangImg1}
+                        />
+                    </StyledSlide>
+                    <StyledSlide index={1}>
+                        <ProjectCard
+                            projectImgUrl={Project1Img}
+                            langImgUrl={LangImg1}
+                        />
+                    </StyledSlide>
+                    <StyledSlide index={2}>
+                        <ProjectCard
+                            projectImgUrl={Project1Img}
+                            langImgUrl={LangImg1}
+                        />
+                    </StyledSlide>
+                    <StyledSlide index={3}>
+                        <ProjectCard
+                            projectImgUrl={Project1Img}
+                            langImgUrl={LangImg1}
+                        />
+                    </StyledSlide>
                 </Slider>
-                <DotGroup
+                <StyledDotGroup />
             </StyledCarouselProvider>
         </ProjectContainer>
     );

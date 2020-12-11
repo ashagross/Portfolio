@@ -13,13 +13,6 @@ const NavBarContainer = styled.div`
     justify-content: space-between;
 `;
 
-const BrandContainer = styled.div`
-
-`;
-
-const AccessibilityContainer = styled.div`
-
-`;
 const Brand = styled.img`
     height: 6em;
     width: 6em;
@@ -41,12 +34,8 @@ const Button = styled.button`
 export function NavBar(props) {
     return (
         <NavBarContainer>
-            <BrandContainer>
-                <Brand src={BrandImg} />
-            </BrandContainer>
-            <AccessibilityContainer>
-                <Button>Procrastinate</Button>
-            </AccessibilityContainer>
+            <Brand src={BrandImg} />
+            <Button>Procrastinate</Button>
         </NavBarContainer>
     );
 }

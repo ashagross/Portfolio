@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import { AboutMeSection } from './skillsSection';
 import { ProjectSection } from './projectsSection';
 import { Marginer } from '../../components/marginer';
+import { MoreAboutMeSection } from '../homepage/aboutSection';
+import { Footer } from '../../components/footer';
 
 
 
@@ -24,6 +26,9 @@ export function Homepage(props) {
             <AboutMeSection />
             <Marginer direction="vertical" margin="2em" />
             <ProjectSection />
+            <MoreAboutMeSection />
+            <Marginer direction="vertical" margin="8em" />
+            <Footer />
         </PageContainer>
     );
 }

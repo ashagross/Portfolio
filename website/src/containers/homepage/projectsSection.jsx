@@ -1,9 +1,10 @@
-import { CarouselProvider, DotGroup, Slider, Slide } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
 import React from 'react';
 import { SectionTitle } from '../../components/sectionTitle';
 import styled from 'styled-components';
 import { Element } from "react-scroll";
 import { ProjectCard } from '../../components/projectCard';
+import { useMediaQuery } from 'react-responsive';
 
 
 import 'pure-react-carousel/dist/react-carousel.es.css';
@@ -26,6 +27,10 @@ const ProjectContainer = styled(Element)`
 const StyledCarouselProvider = styled(CarouselProvider)`
     width: 50%;
     margin-top: 8em;
+
+    @media screen and (max-width: 480px) {
+        width: 100%
+    }
 `;
 
 const StyledSlide = styled(Slide)`
@@ -37,36 +42,20 @@ const StyledSlide = styled(Slide)`
 `;
 
 
-const StyledDotGroup = styled(DotGroup)`
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10em;
-    button {
-     width: 11px;
-     height: 11px;
-     border-radius: 50%;
-     background-color: #e4e4e4;
-     border: none;
-     outline: none;
-     &:not(:last-of-type) {
-       margin-right: 6px;
-    }
-  }
-  .carousel__dot--selected {
-    background-color: #e07a5f;
-  }
-`;
 export function ProjectSection(props) {
+
+    const isMobile = useMediaQuery({ query: 'max-width=l 480px'});
+
     return (
         <ProjectContainer>
             <SectionTitle>What I've Worked On</SectionTitle>
             <StyledCarouselProvider
                 naturalSlideWidth={200}
-                naturalSlideHeight={250}
+                naturalSlideHeight={ isMobile ? 350 : 250 }
                 totalSlides={4}
-                visibleSlides={2}
+                visibleSlides={1}
                 isPlaying={true}
-                interval={6000}
+                interval={4000}
                 >
                 <Slider>
                     <StyledSlide index={0}>
@@ -94,7 +83,6 @@ export function ProjectSection(props) {
                         />
                     </StyledSlide>
                 </Slider>
-                <StyledDotGroup />
             </StyledCarouselProvider>
         </ProjectContainer>
     );

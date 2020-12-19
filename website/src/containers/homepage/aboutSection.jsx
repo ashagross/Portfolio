@@ -12,6 +12,8 @@ const MoreAboutContainer = styled(Element)`
     flex-direction: column;
     align-items: center;
     margin-top: 8em;
+    flex-wrap: wrap-reverse;
+    padding: 0 1em;
 `;
 
 const AboutContainer = styled.div`
@@ -20,6 +22,11 @@ const AboutContainer = styled.div`
     justify-content: center;
     align-items: center;
     max-width: 1000px;
+
+    @media screen and (max-width: 480px){
+        max-width: 100%;
+        flex-wrap: wrap-reverse;
+    }
 `;
 
 const AboutText = styled.p`
@@ -27,12 +34,22 @@ const AboutText = styled.p`
     font-size: 19px;
     font-family: 'Lato', sans-serif;
     line-height: 1.4;
+    margin-right: 2em;
+
+    @media screen and (max-width: 480px){
+        font-size: 15px;
+        margin-left: 2em;
+    }
 `;
 
 const AboutImg = styled.img`
     width: 500px;
     height: 400px;
-    margin-left: 7em;
+    margin-bottom: 3em;
+
+    @media screen and (max-width: 480px) {
+        width: 370px;
+        height: 290px;
 `;
 
 export function MoreAboutMeSection(props) {

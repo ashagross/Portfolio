@@ -10,12 +10,22 @@ const SkillsContainer = styled.div`
     margin-bottom: 5em;
     flex-wrap: wrap-reverse;
     flex-direction: ${({ isReversed }) => isReversed && 'row-reverse'};
+
+    @media screen and (max-width: 480px) {
+        justify-content: center;
+    }
 `;
 
 const SkillsImg = styled.img`
     margin-left: 200px;
     width: 9em;
     height: 9em;
+
+    @media screen and (max-width: 480px) {
+        width: 7em;
+        height: 7em;
+        margin-right: 12em;
+    }
 `;
 
 const DescriptionContainer = styled.div`
@@ -23,6 +33,10 @@ const DescriptionContainer = styled.div`
     flex-direction: column;
     align-items: center;
     max-width: 60%;
+    
+    @media screen and (max-width: 480px) {
+        max-width: 100%;
+    }
 `;
 
 const Details = styled.p`
@@ -31,6 +45,12 @@ const Details = styled.p`
     text-align: center;
     max-width: 70%;
     font-family: 'Lato', sans-serif;
+
+    @media screen and (max-width: 480px) {
+        width: 100%;
+        font-size: 15px;
+        padding-left: 1em;
+    }
 `;
 
 const Title = styled.h2`

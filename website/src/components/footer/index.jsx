@@ -2,11 +2,13 @@
 import React from 'react';
 import { Element } from 'react-scroll';
 import { Marginer } from '../marginer/index';
+import { Form } from '../form/Form';
 import styled from 'styled-components';
 
 
 
 import BrandImg from '../../assets/logo/AGBrand.png';
+
 
 const FooterContainer = styled(Element)`
     width: 100%;
@@ -65,6 +67,7 @@ export function Footer(props) {
             <BrandIcon src={BrandImg} />
             <ContactContainer>
                 <Contact>Lets Chat!</Contact>
+                <Form />
             </ContactContainer>
             <Marginer direction="vertical" margin="8em" />
             <AccessibilityContainer />

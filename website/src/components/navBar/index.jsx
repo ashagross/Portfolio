@@ -26,6 +26,7 @@ const Button = styled.button`
     transition: all 220ms ease-in-out;
     cursor: pointer;
     border: none;
+    outline: none;
 
     &:hover {
         color: #e07a5f;
@@ -35,7 +36,7 @@ export function NavBar(props) {
     return (
         <NavBarContainer>
             <Brand src={BrandImg} />
-            <Button>Procrastinate</Button>
+            <Button>Need a break? (coming soon)</Button>
         </NavBarContainer>
     );
 }

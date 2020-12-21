@@ -26,12 +26,12 @@ export function AboutMeSection(props) {
             <Marginer direction='vertical' margin='3em' />
             <MySkills 
                 title='React.js'
-                description='I love the complete freedom to decide what extent of React to use in applications and it can be comfortably used as a view layer with other technologies on controllers.'
+                description='I love the complete freedom to decide what extent of React to use in applications and that it can be comfortably used as a view layer with other technologies on controllers.'
                 imgUrl={ReactImg}
             />
             <MySkills
                 title='Node.js'
-                description='No mismatch between the backend and the frontend in terms of communication, they work the same on both sides.66'
+                description='No mismatch between the backend and the frontend in terms of communication, they work the same on both sides'
                 imgUrl={NodeImg}
                 isReversed
             />

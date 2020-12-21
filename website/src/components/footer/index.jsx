@@ -21,30 +21,24 @@ const FooterContainer = styled(Element)`
 `;
 
 const ContactContainer= styled.div`
-    margin-top: 8em;
+    margin-top: 2em;
+    margin-bottom: 3em;
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 1000px;
 `;
+const BrandFooter = styled.img`
+    width: 15em;
+    height: 15em;
 
-const Contact = styled.p`
-    color: #7a7a7a;
-    font-size: 19px;
-    font-family: 'Lato', sans-serif;
-    line-height: 1.4;
-`;
-
-const BrandIcon= styled.img`
-    width: 8em;
-    height: 8emx;
+    @media screen and (max-width: 480px) {
+        display: none;
+    }
 `;
 
 
 const AccessibilityContainer = styled.div`
-    width: 80%;
-    display: flex;
-    border-top: 1px solid #e07a5f;
     padding-top: 6px;
     padding-left: 5px;
     padding-right: 5px;
@@ -52,26 +46,26 @@ const AccessibilityContainer = styled.div`
 `;
 
 const RightsReserved = styled.div`
+    text-align: center;
+    width: 80%;
+    border-top: 1px solid #e07a5f;
     font-family: 'Lato', sans-serif;
     bottom: 8px;
-    left: 50%;
     color: #f6efe9;
     font-size: 12px;
-    padding-top: 1em;
+    
 `;
 
 export function Footer(props) {
     return (
         <FooterContainer>
             <Marginer direction="vertical" margin="2em" />
-            <BrandIcon src={BrandImg} />
             <ContactContainer>
-                <Contact>Lets Chat!</Contact>
                 <Form />
+                <BrandFooter src={BrandImg} />
             </ContactContainer>
-            <Marginer direction="vertical" margin="8em" />
-            <AccessibilityContainer />
             <RightsReserved>&copy; 2020 Asha Gross All rights reserved</RightsReserved>
+            <AccessibilityContainer />
         </FooterContainer>
     )
 }

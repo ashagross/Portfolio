@@ -3,7 +3,7 @@ import { Element } from 'react-scroll';
 import styled from 'styled-components';
 import { SectionTitle } from '../../components/sectionTitle';
 
-import AboutImgSrc from '../../assets/pictures/project1.jpg'
+import AboutImgSrc from '../../assets/pictures/westieChicken.png'
 
 
 const MoreAboutContainer = styled(Element)`
@@ -43,8 +43,8 @@ const AboutText = styled.p`
 `;
 
 const AboutImg = styled.img`
-    width: 500px;
-    height: 400px;
+    width: 600px;
+    height: 500px;
     margin-bottom: 3em;
 
     @media screen and (max-width: 480px) {
@@ -58,11 +58,11 @@ export function MoreAboutMeSection(props) {
             <SectionTitle>About Me</SectionTitle>
             <AboutContainer>
                 <AboutText>
-                    Purrr purr littel cat, little cat purr purr experiences short bursts of poo-phoria after going to the loo but sleep nap poop in the plant pot yet i heard this rumor where the humans are our owners, pfft, what do they know?!. 
+                    I'm a very curious person who enjoys figuring out the building blocks of the world, and rearranging them to build something even better. My career is developing software.
                     {<br />}{<br />}
-                    Hide from vacuum cleaner shred all toilet paper and spread around the house so love so ask for petting hunt anything that moves, so cat is love, cat is life. Head nudges . 
+                    In my spare time you can find me on the battle grounds of Azeroth rolling my face across the keyboard defeating my enemies with my various curses and corruption spells. Zug Zug
                     {<br />}{<br />}
-                    Prance along on top of the garden fence, annoy the neighbor's dog and make it bark walk on keyboard adventure always or scratch leg; meow for can opener to feed me. Love you, then bite you demand to have some of whatever the human is cooking, then sniff the offering and walk away for mouse a nice warm laptop for me to sit on hide when guests come over chirp at birds.
+                    I also recently purchased a 1973 VW Westie that I've been trying to restore on the weekends. I've taught myself body work, welding, and some other small mechanial details. It's been a fun learning experience to say the least.
                 </AboutText>
                 <AboutImg src={AboutImgSrc} />
             </AboutContainer>

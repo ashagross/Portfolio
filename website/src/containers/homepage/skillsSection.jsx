@@ -26,18 +26,18 @@ export function AboutMeSection(props) {
             <Marginer direction='vertical' margin='3em' />
             <MySkills 
                 title='React.js'
-                description='Cat meoooow i iz master of hoomaan, not hoomaan master of i, oooh damn dat dog hack.'
+                description='I love the complete freedom to decide what extent of React to use in applications and it can be comfortably used as a view layer with other technologies on controllers.'
                 imgUrl={ReactImg}
             />
             <MySkills
                 title='Node.js'
-                description='Cat meoooow i iz master of hoomaan, not hoomaan master of i, oooh damn dat dog hack.'
+                description='No mismatch between the backend and the frontend in terms of communication, they work the same on both sides.66'
                 imgUrl={NodeImg}
                 isReversed
             />
             <MySkills
                 title='Styling'
-                description='Cat meoooow i iz master of hoomaan, not hoomaan master of i, oooh damn dat dog hack.'
+                description='I do love styled components but bootstrap gives the capability to build a functional, attractive design in just minutes.'
                 imgUrl={BootstrapImg}
             />
         </AboutMeContainer>

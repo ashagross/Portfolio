@@ -8,14 +8,8 @@ import { useMediaQuery } from 'react-responsive';
 
 
 import 'pure-react-carousel/dist/react-carousel.es.css';
-
-import Project1Img from '../../assets/pictures/project1.jpg';
-/* import Project2Img from '../../assets/pictures/project1.jpg';
-import Project3Img from '../../assets/pictures/project1.jpg';
-import Project4Img from '../../assets/pictures/project1.jpg'; */
-
 import LangImg1 from '../../assets/icons/react-brands.svg';
-
+import Project1Img from '../../assets/pictures/project1.png'
 
 const ProjectContainer = styled(Element)`
     height: 700px;
@@ -48,7 +42,7 @@ export function ProjectSection(props) {
 
     return (
         <ProjectContainer>
-            <SectionTitle>What I've Worked On</SectionTitle>
+            <SectionTitle>What I've Worked On (Coming Soon)</SectionTitle>
             <StyledCarouselProvider
                 naturalSlideWidth={200}
                 naturalSlideHeight={ isMobile ? 350 : 250 }

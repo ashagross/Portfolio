@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/x6wr6qxj8x6l/repositories/Portfolio 
+    - /bin/cp -R images $DEPLOYPATH

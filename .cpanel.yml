@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/b6754kptslyk/repositories/website
+    - export DEPLOYPATH=/home/b6754kptslyk/repositories/pwebsite
     - /bin/cp -a * $DEPLOYPATH
